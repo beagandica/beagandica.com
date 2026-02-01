@@ -420,56 +420,40 @@
     <!-- Connect Section -->
     <section id="connect" class="connect">
         <div class="container">
-            <div class="connect-wrapper">
-                <div class="connect-content">
+            <div class="connect-content-centered">
+                <div class="section-header">
                     <span class="section-label">Let's Connect</span>
                     <h2 class="section-title">Start a Conversation</h2>
-                    <p>Whether you're interested in speaking engagements, collaboration opportunities, mentorship, or supporting Nuevo Foundation, I'd love to hear from you.</p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/beagandica" target="_blank" class="social-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                            LinkedIn
-                        </a>
-                        <a href="https://linktr.ee/beagandica" target="_blank" class="social-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.5 17.5h-2v-4.5h-5v4.5h-2v-11h2v4.5h5v-4.5h2v11z"/></svg>
-                            Linktree
-                        </a>
-                        <a href="mailto:redbull_b@outlook.com" class="social-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                            Email
-                        </a>
-                    </div>
+                    <p class="connect-description">Whether you're interested in speaking engagements, collaboration opportunities, mentorship, or supporting Nuevo Foundation, I'd love to hear from you.</p>
                 </div>
-                <div class="connect-form">
-                    <form id="contact-form" action="https://formspree.io/redbull_b@outlook.com" method="POST">
-                        <input type="hidden" name="_subject" value="🌐 New message from BeaMendezGandica.com">
-                        <input type="hidden" name="_captcha" value="false">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                <div class="connect-links">
+                    <a href="https://www.linkedin.com/in/beagandica" target="_blank" class="connect-link linkedin">
+                        <div class="connect-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                        <div class="connect-content">
+                            <h3>LinkedIn</h3>
+                            <p>Connect professionally and see my latest updates</p>
                         </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <select id="subject" name="subject" required>
-                                <option value="">Select a topic...</option>
-                                <option value="speaking">Speaking Engagement</option>
-                                <option value="collaboration">Collaboration</option>
-                                <option value="mentorship">Mentorship</option>
-                                <option value="nuevo">Nuevo Foundation</option>
-                                <option value="media">Media Inquiry</option>
-                                <option value="other">Other</option>
-                            </select>
+                    </a>
+                    <a href="mailto:redbull_b@outlook.com" class="connect-link email">
+                        <div class="connect-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="4" required></textarea>
+                        <div class="connect-content">
+                            <h3>Email</h3>
+                            <p>Send me a direct message for inquiries</p>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-                    </form>
+                    </a>
+                    <a href="https://linktr.ee/beagandica" target="_blank" class="connect-link linktree">
+                        <div class="connect-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.5 17.5h-2v-4.5h-5v4.5h-2v-11h2v4.5h5v-4.5h2v11z"/></svg>
+                        </div>
+                        <div class="connect-content">
+                            <h3>Linktree</h3>
+                            <p>Access all my social links and resources</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

@@ -939,101 +939,89 @@ section {
     background: var(--light);
 }
 
-.connect-wrapper {
+.connect-content-centered {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.connect-description {
+    color: var(--gray);
+    font-size: 18px;
+    margin-bottom: 48px;
+    line-height: 1.6;
+}
+
+.connect-links {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.connect-link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--white);
+    padding: 32px 24px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-decoration: none;
+    border: 2px solid transparent;
+}
+
+.connect-link:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary);
+}
+
+.connect-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.connect-link.linkedin .connect-icon {
+    background: linear-gradient(135deg, #0077b5 0%, #005885 100%);
+    color: white;
+}
+
+.connect-link.email .connect-icon {
+    background: linear-gradient(135deg, #ea4335 0%, #c5221f 100%);
+    color: white;
+}
+
+.connect-link.linktree .connect-icon {
+    background: linear-gradient(135deg, #39e09b 0%, #1db071 100%);
+    color: white;
+}
+
+.connect-content {
+    text-align: left;
+    flex: 1;
+}
+
+.connect-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--dark);
+    margin: 0 0 8px 0;
+    font-family: 'Inter', sans-serif;
 }
 
 .connect-content p {
     color: var(--gray);
-    margin-bottom: 32px;
-}
-
-.social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.social-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    font-weight: 500;
-    color: var(--dark);
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.social-link:hover {
-    color: var(--primary);
-}
-
-.social-link svg {
-    width: 24px;
-    height: 24px;
-}
-
-.connect-form {
-    background: var(--white);
-    padding: 40px;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-}
-
-.form-group {
-    margin-bottom: 24px;
-}
-
-.form-group label {
-    display: block;
+    margin: 0;
     font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--dark);
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 14px 16px;
-    font-size: 15px;
-    font-family: inherit;
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    border-radius: var(--radius);
-    transition: var(--transition);
-    background: var(--white);
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.form-group .error-message {
-    display: block;
-    color: #dc2626;
-    font-size: 13px;
-    margin-top: 6px;
-}
-
-.form-group .input-error {
-    border-color: #dc2626;
-}
-
-.form-group .input-error:focus {
-    border-color: #dc2626;
-    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+    line-height: 1.5;
 }
 
 /* ===== Newsletter Section ===== */
@@ -1182,8 +1170,7 @@ section {
         height: 360px;
     }
 
-    .nuevo-content,
-    .connect-wrapper {
+    .nuevo-content {
         grid-template-columns: 1fr;
     }
 
@@ -1281,8 +1268,13 @@ section {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .connect-form {
-        padding: 24px;
+    .connect-links {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .connect-link {
+        padding: 24px 20px;
     }
 
     .newsletter-form {
