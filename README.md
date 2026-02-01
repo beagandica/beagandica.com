@@ -9,7 +9,7 @@ A modern, responsive personal portfolio website showcasing the achievements, wor
 This website tells the story of Bea Mendez Gandica, a Venezuelan-American technology leader who has dedicated her career to breaking barriers and creating opportunities for underrepresented communities in STEM. Born in San Cristóbal, Venezuela, and now making history in the United States, this portfolio showcases her journey from immigrant to industry leader.
 
 ### Key Highlights
-- **22,000+ students** impacted across **39 countries and territories**
+- **22,762+ students** impacted across **39 countries and territories**
 - **First Venezuelan-American** to have a statue in the United States (Smithsonian AAAS IF/THEN Collection)
 - **10+ years** at Microsoft as a Program Manager
 - **Founder & CEO** of Nuevo Foundation (2018-present)
@@ -175,11 +175,7 @@ The best way to reach out is via **LinkedIn**: [Connect with Bea on LinkedIn](ht
 ### Other Ways to Connect:
 - **Professional Speaking Inquiries**: Through LinkedIn messaging
 - **Nuevo Foundation**: Learn more at [nuevofoundation.org](https://nuevofoundation.org)
-- **Microsoft**: Connect through internal channels if you're a Microsoft employee
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgments
 
