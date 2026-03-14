@@ -1,3 +1,32 @@
+// ===== Language Toggle =====
+function setLanguage(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            el.innerHTML = translations[lang][key];
+        }
+    });
+    document.documentElement.lang = lang;
+    localStorage.setItem('preferred-lang', lang);
+
+    document.querySelectorAll('.lang-option').forEach(opt => {
+        opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
+    });
+}
+
+document.getElementById('lang-toggle')?.addEventListener('click', () => {
+    const current = localStorage.getItem('preferred-lang') || 'en';
+    setLanguage(current === 'en' ? 'es' : 'en');
+});
+
+// Apply saved language on load
+(function() {
+    const saved = localStorage.getItem('preferred-lang');
+    if (saved && saved !== 'en') {
+        setLanguage(saved);
+    }
+})();
+
 // ===== Navigation Toggle =====
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');

@@ -27,6 +27,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="translations.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -39,13 +40,18 @@
                 <span></span>
             </button>
             <ul class="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#expertise">What I Do</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#nuevo">Nuevo Foundation</a></li>
-                <li><a href="#speaking">Speaking</a></li>
-                <li><a href="#connect" class="btn-nav">Connect</a></li>
+                <li><a href="#about" data-i18n="nav-about">About</a></li>
+                <li><a href="#expertise" data-i18n="nav-expertise">What I Do</a></li>
+                <li><a href="#achievements" data-i18n="nav-achievements">Achievements</a></li>
+                <li><a href="#nuevo" data-i18n="nav-nuevo">Nuevo Foundation</a></li>
+                <li><a href="#speaking" data-i18n="nav-speaking">Speaking</a></li>
+                <li><a href="#connect" class="btn-nav" data-i18n="nav-connect">Connect</a></li>
             </ul>
+            <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">
+                <span class="lang-option active" data-lang="en">EN</span>
+                <span class="lang-divider">|</span>
+                <span class="lang-option" data-lang="es">ES</span>
+            </button>
         </div>
     </nav>
 
@@ -53,13 +59,13 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <p class="hero-tagline">Product Leader • STEM Advocate • Speaker • Founder</p>
+                <p class="hero-tagline" data-i18n="hero-tagline">Product Leader • STEM Advocate • Speaker • Founder</p>
                 <h1 class="hero-title">Bea Mendez Gandica</h1>
-                <p class="hero-subtitle">Program Manager at Microsoft. Founder & CEO of Nuevo Foundation. First Venezuelan-American to have a statue in the United States.</p>
-                <blockquote class="hero-quote">"Rewrite the rules of the world."</blockquote>
+                <p class="hero-subtitle" data-i18n="hero-subtitle">Program Manager at Microsoft. Founder & CEO of Nuevo Foundation. First Venezuelan-American to have a statue in the United States.</p>
+                <blockquote class="hero-quote" data-i18n="hero-quote">"Rewrite the rules of the world."</blockquote>
                 <div class="hero-buttons">
-                    <a href="#connect" class="btn btn-primary">Let's Connect</a>
-                    <a href="#about" class="btn btn-secondary">My Story</a>
+                    <a href="#connect" class="btn btn-primary" data-i18n="hero-btn-connect">Let's Connect</a>
+                    <a href="#about" class="btn btn-secondary" data-i18n="hero-btn-story">My Story</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -69,7 +75,7 @@
             </div>
         </div>
         <div class="hero-scroll">
-            <span>Scroll to explore</span>
+            <span data-i18n="hero-scroll">Scroll to explore</span>
             <div class="scroll-indicator"></div>
         </div>
     </section>
@@ -78,28 +84,28 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">My Story</span>
-                <h2 class="section-title">From Venezuela to Making History</h2>
+                <span class="section-label" data-i18n="about-label">My Story</span>
+                <h2 class="section-title" data-i18n="about-title">From Venezuela to Making History</h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="lead">"Si usted tiene, usted tiene que dar."<br><span class="quote-attr">My grandfather, Papito</span></p>
-                    <p>Born in San Cristóbal in the Venezuelan Andes, I moved to Miami at age 12 to learn English, studied abroad in Germany, and eventually made my way to the United States to pursue my dreams in technology.</p>
-                    <p>For over <strong>10 years at Microsoft</strong>, I've worked as a Program Manager on security engineering and Azure cloud services. But my work extends far beyond code. I'm passionate about opening doors for others who look like me.</p>
-                    <p>In 2018, I founded <strong>Nuevo Foundation</strong> to ensure every child, regardless of their background, can see themselves in technology. Today, we've inspired <strong>22,762+ students across 39 countries and territories</strong>.</p>
-                    <p>I became the <strong>first Venezuelan-American to have a statue in the United States</strong>: a 3D printed life-size statue displayed at the Smithsonian as part of the AAAS IF/THEN Collection, celebrating women in STEM.</p>
+                    <p class="lead"><span data-i18n="about-quote">"Si usted tiene, usted tiene que dar."</span><br><span class="quote-attr" data-i18n="about-quote-attr">My grandfather, Papito</span></p>
+                    <p data-i18n="about-p1">Born in San Cristóbal in the Venezuelan Andes, I moved to Miami at age 12 to learn English, studied abroad in Germany, and eventually made my way to the United States to pursue my dreams in technology.</p>
+                    <p data-i18n="about-p2">For over <strong>10 years at Microsoft</strong>, I've worked as a Program Manager on security engineering and Azure cloud services. But my work extends far beyond code. I'm passionate about opening doors for others who look like me.</p>
+                    <p data-i18n="about-p3">In 2018, I founded <strong>Nuevo Foundation</strong> to ensure every child, regardless of their background, can see themselves in technology. Today, we've inspired <strong>23,092+ students across 39 countries and territories</strong>.</p>
+                    <p data-i18n="about-p4">I became the <strong>first Venezuelan-American to have a statue in the United States</strong>: a 3D printed life-size statue displayed at the Smithsonian as part of the AAAS IF/THEN Collection, celebrating women in STEM.</p>
                     <div class="about-highlights">
                         <div class="highlight">
-                            <span class="highlight-number">22,762+</span>
-                            <span class="highlight-label">Students Impacted</span>
+                            <span class="highlight-number">23,092+</span>
+                            <span class="highlight-label" data-i18n="about-stat1-label">Students Impacted</span>
                         </div>
                         <div class="highlight">
                             <span class="highlight-number">39</span>
-                            <span class="highlight-label">Countries & Territories</span>
+                            <span class="highlight-label" data-i18n="about-stat2-label">Countries & Territories</span>
                         </div>
                         <div class="highlight">
                             <span class="highlight-number">10+</span>
-                            <span class="highlight-label">Years at Microsoft</span>
+                            <span class="highlight-label" data-i18n="about-stat3-label">Years at Microsoft</span>
                         </div>
                     </div>
                 </div>
@@ -111,57 +117,57 @@
     <section id="expertise" class="expertise">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">What I Do</span>
-                <h2 class="section-title">Expertise & Services</h2>
+                <span class="section-label" data-i18n="expertise-label">What I Do</span>
+                <h2 class="section-title" data-i18n="expertise-title">Expertise & Services</h2>
             </div>
             <div class="expertise-grid">
                 <div class="expertise-card">
                     <div class="expertise-icon">💻</div>
-                    <h3>Product & Program Management</h3>
-                    <p>10+ years at Microsoft leading cross-functional teams on Azure cloud services, security engineering, and platform development. Expert in shipping products at scale.</p>
+                    <h3 data-i18n="expertise-card1-title">Product & Program Management</h3>
+                    <p data-i18n="expertise-card1-desc">10+ years at Microsoft leading cross-functional teams on Azure cloud services, security engineering, and platform development. Expert in shipping products at scale.</p>
                     <ul class="expertise-skills">
-                        <li>Azure Cloud Services</li>
-                        <li>Security Engineering</li>
-                        <li>Cross-team Collaboration</li>
-                        <li>Agile/Scrum Leadership</li>
+                        <li data-i18n="expertise-card1-skill1">Azure Cloud Services</li>
+                        <li data-i18n="expertise-card1-skill2">Security Engineering</li>
+                        <li data-i18n="expertise-card1-skill3">Cross-team Collaboration</li>
+                        <li data-i18n="expertise-card1-skill4">Agile/Scrum Leadership</li>
                     </ul>
                 </div>
                 <div class="expertise-card">
                     <div class="expertise-icon">🎤</div>
-                    <h3>Keynotes & Speaking</h3>
-                    <p>Engaging audiences worldwide on diversity in tech, the immigrant STEM journey, and building purpose-driven careers. Available for conferences, corporate events, and universities.</p>
+                    <h3 data-i18n="expertise-card2-title">Keynotes & Speaking</h3>
+                    <p data-i18n="expertise-card2-desc">Engaging audiences worldwide on diversity in tech, the immigrant STEM journey, and building purpose-driven careers. Available for conferences, corporate events, and universities.</p>
                     <ul class="expertise-skills">
-                        <li>Keynote Addresses</li>
-                        <li>Panel Moderation</li>
-                        <li>Fireside Chats</li>
-                        <li>Virtual Events</li>
+                        <li data-i18n="expertise-card2-skill1">Keynote Addresses</li>
+                        <li data-i18n="expertise-card2-skill2">Panel Moderation</li>
+                        <li data-i18n="expertise-card2-skill3">Fireside Chats</li>
+                        <li data-i18n="expertise-card2-skill4">Virtual Events</li>
                     </ul>
                 </div>
                 <div class="expertise-card">
                     <div class="expertise-icon">🌱</div>
-                    <h3>STEM Education & Workshops</h3>
-                    <p>Through Nuevo Foundation, delivering interactive coding workshops that inspire underrepresented students to pursue tech careers. Customizable for schools and organizations.</p>
+                    <h3 data-i18n="expertise-card3-title">STEM Education & Workshops</h3>
+                    <p data-i18n="expertise-card3-desc">Through Nuevo Foundation, delivering interactive coding workshops that inspire underrepresented students to pursue tech careers. Customizable for schools and organizations.</p>
                     <ul class="expertise-skills">
-                        <li>K-12 Coding Workshops</li>
-                        <li>Teacher Training</li>
-                        <li>Curriculum Development</li>
-                        <li>Corporate Volunteer Programs</li>
+                        <li data-i18n="expertise-card3-skill1">K-12 Coding Workshops</li>
+                        <li data-i18n="expertise-card3-skill2">Teacher Training</li>
+                        <li data-i18n="expertise-card3-skill3">Curriculum Development</li>
+                        <li data-i18n="expertise-card3-skill4">Corporate Volunteer Programs</li>
                     </ul>
                 </div>
                 <div class="expertise-card">
                     <div class="expertise-icon">🤝</div>
-                    <h3>D&I Consulting & Mentorship</h3>
-                    <p>Helping organizations build inclusive cultures and develop diverse talent pipelines. One-on-one mentorship for underrepresented professionals in tech.</p>
+                    <h3 data-i18n="expertise-card4-title">D&I Consulting & Mentorship</h3>
+                    <p data-i18n="expertise-card4-desc">Helping organizations build inclusive cultures and develop diverse talent pipelines. One-on-one mentorship for underrepresented professionals in tech.</p>
                     <ul class="expertise-skills">
-                        <li>ERG Strategy & Leadership</li>
-                        <li>Talent Pipeline Development</li>
-                        <li>1:1 Career Mentorship</li>
-                        <li>Hispanic/Latinx Initiatives</li>
+                        <li data-i18n="expertise-card4-skill1">ERG Strategy & Leadership</li>
+                        <li data-i18n="expertise-card4-skill2">Talent Pipeline Development</li>
+                        <li data-i18n="expertise-card4-skill3">1:1 Career Mentorship</li>
+                        <li data-i18n="expertise-card4-skill4">Hispanic/Latinx Initiatives</li>
                     </ul>
                 </div>
             </div>
             <div class="expertise-cta">
-                <a href="#connect" class="btn btn-primary">Work With Me</a>
+                <a href="#connect" class="btn btn-primary" data-i18n="expertise-cta">Work With Me</a>
             </div>
         </div>
     </section>
@@ -170,48 +176,48 @@
     <section id="achievements" class="achievements">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Recognition</span>
-                <h2 class="section-title">Awards & Achievements</h2>
+                <span class="section-label" data-i18n="achievements-label">Recognition</span>
+                <h2 class="section-title" data-i18n="achievements-title">Awards & Achievements</h2>
             </div>
             <div class="achievements-grid">
                 <div class="achievement-card featured">
                     <div class="achievement-icon">🗽</div>
-                    <h3>First Venezuelan-American Statue in the US</h3>
-                    <p>AAAS IF/THEN Ambassador - Life-size 3D printed statue displayed at the Smithsonian Institution</p>
+                    <h3 data-i18n="achievement1-title">First Venezuelan-American Statue in the US</h3>
+                    <p data-i18n="achievement1-desc">AAAS IF/THEN Ambassador - Life-size 3D printed statue displayed at the Smithsonian Institution</p>
                 </div>
                 <div class="achievement-card">
                     <div class="achievement-icon">🏆</div>
-                    <h3>HACR 40 Under 40</h3>
-                    <p>Young Hispanic Corporate Achievers Award (2019)</p>
+                    <h3 data-i18n="achievement2-title">HACR 40 Under 40</h3>
+                    <p data-i18n="achievement2-desc">Young Hispanic Corporate Achievers Award (2019)</p>
                 </div>
                 <div class="achievement-card">
                     <div class="achievement-icon">🎓</div>
-                    <h3>Alma Mater Recognition</h3>
-                    <p>Distinguished Citizen Award - University of Arizona (2023)<br>Outstanding Recent Alumni - UW-Eau Claire (2019)</p>
+                    <h3 data-i18n="achievement3-title">Alma Mater Recognition</h3>
+                    <p data-i18n="achievement3-desc">Distinguished Citizen Award - University of Arizona (2023)<br>Outstanding Recent Alumni - UW-Eau Claire (2019)</p>
                 </div>
                 <div class="achievement-card">
                     <div class="achievement-icon">🎤</div>
-                    <h3>Commencement Speaker</h3>
-                    <p>University of Wisconsin-Eau Claire (2019)</p>
+                    <h3 data-i18n="achievement4-title">Commencement Speaker</h3>
+                    <p data-i18n="achievement4-desc">University of Wisconsin-Eau Claire (2019)</p>
                 </div>
                 <div class="achievement-card">
                     <div class="achievement-icon">📰</div>
-                    <h3>Forbes 30 Under 30</h3>
-                    <p>Shortlisted & attended Berlin Wall 30th Anniversary Summit</p>
+                    <h3 data-i18n="achievement5-title">Forbes 30 Under 30</h3>
+                    <p data-i18n="achievement5-desc">Shortlisted & attended Berlin Wall 30th Anniversary Summit</p>
                 </div>
                 <div class="achievement-card">
                     <div class="achievement-icon">💯</div>
-                    <h3>TOP 100 Latinas</h3>
-                    <p>Latino Leaders Magazine (2022, 2023)</p>
+                    <h3 data-i18n="achievement6-title">TOP 100 Latinas</h3>
+                    <p data-i18n="achievement6-desc">Latino Leaders Magazine (2022, 2023)</p>
                 </div>
                 <div class="achievement-card">
                     <div class="achievement-icon">📺</div>
-                    <h3>Microsoft Museum</h3>
-                    <p>1 of 5 employees selected to share their story (2019-2021)</p>
+                    <h3 data-i18n="achievement7-title">Microsoft Museum</h3>
+                    <p data-i18n="achievement7-desc">1 of 5 employees selected to share their story (2019-2021)</p>
                 </div>
             </div>
             <div class="featured-in">
-                <p class="featured-label">Featured In</p>
+                <p class="featured-label" data-i18n="featured-label">Featured In</p>
                 <div class="logos">
                     <span class="logo-text">Forbes</span>
                     <span class="logo-text">Marie Claire</span>
@@ -229,18 +235,18 @@
         <div class="container">
             <div class="nuevo-content">
                 <div class="nuevo-text">
-                    <span class="section-label">Nuevo Foundation</span>
-                    <h2 class="section-title">Inspiring the Next Generation</h2>
-                    <p class="lead">Every child deserves to see themselves in technology.</p>
-                    <p>In 2018, I founded Nuevo Foundation with a simple mission: to inspire children from underrepresented backgrounds to explore, feel confident, and succeed in STEM careers.</p>
-                    <p>Through interactive coding workshops, technology classes, and connections with industry role models, we're breaking down stereotypes and building pathways to opportunity in <strong>7 languages</strong> across the globe.</p>
+                    <span class="section-label" data-i18n="nuevo-label">Nuevo Foundation</span>
+                    <h2 class="section-title" data-i18n="nuevo-title">Inspiring the Next Generation</h2>
+                    <p class="lead" data-i18n="nuevo-lead">Every child deserves to see themselves in technology.</p>
+                    <p data-i18n="nuevo-p1">In 2018, I founded Nuevo Foundation with a simple mission: to inspire children from underrepresented backgrounds to explore, feel confident, and succeed in STEM careers.</p>
+                    <p data-i18n="nuevo-p2">Through interactive coding workshops, technology classes, and connections with industry role models, we're breaking down stereotypes and building pathways to opportunity in <strong>7 languages</strong> across the globe.</p>
                     <ul class="nuevo-features">
-                        <li>✨ Interactive coding workshops for K-12 students</li>
-                        <li>✨ Free resources for Title I schools</li>
-                        <li>✨ Programs offered in 7 languages</li>
-                        <li>✨ 90% of students say they learned to code</li>
+                        <li data-i18n="nuevo-feat1">✨ Interactive coding workshops for K-12 students</li>
+                        <li data-i18n="nuevo-feat2">✨ Free resources for Title I schools</li>
+                        <li data-i18n="nuevo-feat3">✨ Programs offered in 7 languages</li>
+                        <li data-i18n="nuevo-feat4">✨ 90% of students say they learned to code</li>
                     </ul>
-                    <a href="https://www.nuevofoundation.org" target="_blank" class="btn btn-gold">Visit Nuevo Foundation →</a>
+                    <a href="https://www.nuevofoundation.org" target="_blank" class="btn btn-gold" data-i18n="nuevo-cta">Visit Nuevo Foundation →</a>
                 </div>
                 <div class="nuevo-right">
                     <div class="nuvi-mascot">
@@ -248,20 +254,20 @@
                     </div>
                     <div class="nuevo-stats">
                         <div class="stat-card">
-                            <span class="stat-number">22,334+</span>
-                            <span class="stat-label">Students Inspired</span>
+                            <span class="stat-number">23,092+</span>
+                            <span class="stat-label" data-i18n="nuevo-stat1-label">Students Inspired</span>
                         </div>
                         <div class="stat-card">
                             <span class="stat-number">39</span>
-                            <span class="stat-label">Countries & Territories</span>
+                            <span class="stat-label" data-i18n="nuevo-stat2-label">Countries & Territories</span>
                         </div>
                         <div class="stat-card">
                             <span class="stat-number">7</span>
-                            <span class="stat-label">Languages</span>
+                            <span class="stat-label" data-i18n="nuevo-stat3-label">Languages</span>
                         </div>
                         <div class="stat-card">
                             <span class="stat-number">90%</span>
-                            <span class="stat-label">Learned to Code</span>
+                            <span class="stat-label" data-i18n="nuevo-stat4-label">Learned to Code</span>
                         </div>
                     </div>
                 </div>
@@ -273,13 +279,13 @@
     <section id="speaking" class="speaking">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Speaking</span>
-                <h2 class="section-title">Sharing Stories That Inspire</h2>
-                <p class="section-description">From keynotes to panels, I speak about diversity in tech, the immigrant STEM journey, and empowering the next generation.</p>
+                <span class="section-label" data-i18n="speaking-label">Speaking</span>
+                <h2 class="section-title" data-i18n="speaking-title">Sharing Stories That Inspire</h2>
+                <p class="section-description" data-i18n="speaking-description">From keynotes to panels, I speak about diversity in tech, the immigrant STEM journey, and empowering the next generation.</p>
             </div>
             <div class="speaking-venues">
                 <div class="venue-category">
-                    <h3>Conferences & Events</h3>
+                    <h3 data-i18n="speaking-cat1">Conferences & Events</h3>
                     <ul>
                         <li>San Diego Comic-Con 2025 (Moderator - AI in Film)</li>
                         <li>ERN Conference 2025</li>
@@ -292,7 +298,7 @@
                     </ul>
                 </div>
                 <div class="venue-category">
-                    <h3>Universities</h3>
+                    <h3 data-i18n="speaking-cat2">Universities</h3>
                     <ul>
                         <li>University of Arizona (Distinguished Citizen 2023)</li>
                         <li>UW-Eau Claire (Commencement Speaker 2019)</li>
@@ -301,7 +307,7 @@
                     </ul>
                 </div>
                 <div class="venue-category">
-                    <h3>Microsoft & Media</h3>
+                    <h3 data-i18n="speaking-cat3">Microsoft & Media</h3>
                     <ul>
                         <li><a href="https://www.youtube.com/watch?v=77RfuX7MVjA" target="_blank">The Code of Us Campaign (2025)</a></li>
                         <li>Hispanic Heritage Month Representative (2025)</li>
@@ -313,29 +319,29 @@
                 </div>
             </div>
             <div class="speaking-topics">
-                <h3>Popular Topics</h3>
+                <h3 data-i18n="speaking-topics-title">Popular Topics</h3>
                 <div class="topics-grid">
                     <div class="topic-card">
-                        <h4>Rewriting the Rules</h4>
-                        <p>How to break barriers and create your own path in tech</p>
+                        <h4 data-i18n="topic1-title">Rewriting the Rules</h4>
+                        <p data-i18n="topic1-desc">How to break barriers and create your own path in tech</p>
                     </div>
                     <div class="topic-card">
-                        <h4>The Immigrant STEM Journey</h4>
-                        <p>From Venezuela to Microsoft: stories of resilience and success</p>
+                        <h4 data-i18n="topic2-title">The Immigrant STEM Journey</h4>
+                        <p data-i18n="topic2-desc">From Venezuela to Microsoft: stories of resilience and success</p>
                     </div>
                     <div class="topic-card">
-                        <h4>Building Impact Through Nonprofits</h4>
-                        <p>Lessons from founding and scaling Nuevo Foundation</p>
+                        <h4 data-i18n="topic3-title">Building Impact Through Nonprofits</h4>
+                        <p data-i18n="topic3-desc">Lessons from founding and scaling Nuevo Foundation</p>
                     </div>
                     <div class="topic-card">
-                        <h4>AI in Film & Reality</h4>
-                        <p>Exploring AI's evolution - Comic-Con panel topic</p>
+                        <h4 data-i18n="topic4-title">AI in Film & Reality</h4>
+                        <p data-i18n="topic4-desc">Exploring AI's evolution - Comic-Con panel topic</p>
                     </div>
                 </div>
             </div>
             <div class="speaking-cta">
-                <p>Interested in having me speak at your event?</p>
-                <a href="#connect" class="btn btn-primary">Get in Touch</a>
+                <p data-i18n="speaking-cta-text">Interested in having me speak at your event?</p>
+                <a href="#connect" class="btn btn-primary" data-i18n="speaking-cta-btn">Get in Touch</a>
             </div>
         </div>
     </section>
@@ -344,8 +350,8 @@
     <section id="media" class="media">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Media & Press</span>
-                <h2 class="section-title">In the Spotlight</h2>
+                <span class="section-label" data-i18n="media-label">Media & Press</span>
+                <h2 class="section-title" data-i18n="media-title">In the Spotlight</h2>
             </div>
             <div class="media-grid">
                 <a href="https://boldjourney.com/meet-beatris-mendez-gandica/" target="_blank" class="media-card">
@@ -382,7 +388,7 @@
                 </a>
             </div>
             <div class="media-cta">
-                <a href="https://linktr.ee/beagandica" target="_blank" class="btn btn-secondary">View All Media →</a>
+                <a href="https://linktr.ee/beagandica" target="_blank" class="btn btn-secondary" data-i18n="media-cta">View All Media →</a>
             </div>
         </div>
     </section>
@@ -391,8 +397,8 @@
     <section id="gallery" class="gallery">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Moments</span>
-                <h2 class="section-title">Highlights</h2>
+                <span class="section-label" data-i18n="gallery-label">Moments</span>
+                <h2 class="section-title" data-i18n="gallery-title">Highlights</h2>
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
@@ -422,9 +428,9 @@
         <div class="container">
             <div class="connect-content-centered">
                 <div class="section-header">
-                    <span class="section-label">Let's Connect</span>
-                    <h2 class="section-title">Start a Conversation</h2>
-                    <p class="connect-description">Whether you're interested in speaking engagements, collaboration opportunities, mentorship, or supporting Nuevo Foundation, I'd love to hear from you.</p>
+                    <span class="section-label" data-i18n="connect-label">Let's Connect</span>
+                    <h2 class="section-title" data-i18n="connect-title">Start a Conversation</h2>
+                    <p class="connect-description" data-i18n="connect-description">Whether you're interested in speaking engagements, collaboration opportunities, mentorship, or supporting Nuevo Foundation, I'd love to hear from you.</p>
                 </div>
                 <div class="connect-links">
                     <a href="https://www.linkedin.com/in/beagandica" target="_blank" class="connect-link linkedin">
@@ -432,8 +438,8 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                         </div>
                         <div class="connect-content">
-                            <h3>LinkedIn</h3>
-                            <p>Connect professionally and see my latest updates</p>
+                            <h3 data-i18n="connect-linkedin-title">LinkedIn</h3>
+                            <p data-i18n="connect-linkedin-desc">Connect professionally and see my latest updates</p>
                         </div>
                     </a>
                     <a href="mailto:redbull_b@outlook.com" class="connect-link email">
@@ -441,8 +447,8 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                         </div>
                         <div class="connect-content">
-                            <h3>Email</h3>
-                            <p>Send me a direct message for inquiries</p>
+                            <h3 data-i18n="connect-email-title">Email</h3>
+                            <p data-i18n="connect-email-desc">Send me a direct message for inquiries</p>
                         </div>
                     </a>
                     <a href="https://linktr.ee/beagandica" target="_blank" class="connect-link linktree">
@@ -450,8 +456,8 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.5 17.5h-2v-4.5h-5v4.5h-2v-11h2v4.5h5v-4.5h2v11z"/></svg>
                         </div>
                         <div class="connect-content">
-                            <h3>Linktree</h3>
-                            <p>Access all my social links and resources</p>
+                            <h3 data-i18n="connect-linktree-title">Linktree</h3>
+                            <p data-i18n="connect-linktree-desc">Access all my social links and resources</p>
                         </div>
                     </a>
                 </div>
@@ -465,16 +471,16 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <span class="footer-logo">Bea Mendez Gandica</span>
-                    <p>Program Manager at Microsoft<br>CEO & Founder, Nuevo Foundation</p>
-                    <p class="footer-quote">"Rewrite the rules of the world."</p>
+                    <p data-i18n="footer-role">Program Manager at Microsoft<br>CEO & Founder, Nuevo Foundation</p>
+                    <p class="footer-quote" data-i18n="footer-quote">"Rewrite the rules of the world."</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#about">About</a>
-                    <a href="#achievements">Achievements</a>
-                    <a href="#nuevo">Nuevo Foundation</a>
-                    <a href="#speaking">Speaking</a>
-                    <a href="#media">Media</a>
-                    <a href="#connect">Connect</a>
+                    <a href="#about" data-i18n="footer-about">About</a>
+                    <a href="#achievements" data-i18n="footer-achievements">Achievements</a>
+                    <a href="#nuevo" data-i18n="footer-nuevo">Nuevo Foundation</a>
+                    <a href="#speaking" data-i18n="footer-speaking">Speaking</a>
+                    <a href="#media" data-i18n="footer-media">Media</a>
+                    <a href="#connect" data-i18n="footer-connect">Connect</a>
                 </div>
                 <div class="footer-social">
                     <a href="https://www.linkedin.com/in/beagandica" target="_blank" aria-label="LinkedIn">
@@ -489,7 +495,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Bea Mendez Gandica. All rights reserved.</p>
+                <p data-i18n="footer-copyright">&copy; 2026 Bea Mendez Gandica. All rights reserved.</p>
             </div>
         </div>
     </footer>
