@@ -1,17 +1,79 @@
 // ===== Language Toggle =====
 function setLanguage(lang) {
+    // Swap text content
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
             el.innerHTML = translations[lang][key];
         }
     });
+
+    // Swap aria-labels
+    document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+        const key = el.getAttribute('data-i18n-aria');
+        if (translations[lang] && translations[lang][key]) {
+            el.setAttribute('aria-label', translations[lang][key]);
+        }
+    });
+
+    // Swap image alt text
+    document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+        const key = el.getAttribute('data-i18n-alt');
+        if (translations[lang] && translations[lang][key]) {
+            el.setAttribute('alt', translations[lang][key]);
+        }
+    });
+
+    // Swap SEO meta tags
+    const metaMap = {
+        'meta-description': { sel: '#meta-description', attr: 'content' },
+        'meta-og-title': { sel: '#meta-og-title', attr: 'content' },
+        'meta-og-description': { sel: '#meta-og-description', attr: 'content' },
+        'meta-twitter-title': { sel: '#meta-twitter-title', attr: 'content' },
+        'meta-twitter-description': { sel: '#meta-twitter-description', attr: 'content' },
+        'meta-title': { sel: null, attr: null }
+    };
+    Object.entries(metaMap).forEach(([key, cfg]) => {
+        if (translations[lang] && translations[lang][key]) {
+            if (key === 'meta-title') {
+                document.title = translations[lang][key];
+            } else {
+                const el = document.querySelector(cfg.sel);
+                if (el) el.setAttribute(cfg.attr, translations[lang][key]);
+            }
+        }
+    });
+
+    // Update HTML lang attribute
     document.documentElement.lang = lang;
     localStorage.setItem('preferred-lang', lang);
 
+    // Update toggle button active state
     document.querySelectorAll('.lang-option').forEach(opt => {
         opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
     });
+
+    // Update URL with lang parameter
+    const url = new URL(window.location);
+    if (lang === 'en') {
+        url.searchParams.delete('lang');
+    } else {
+        url.searchParams.set('lang', lang);
+    }
+    history.replaceState(null, '', url);
+
+    // Analytics: dispatch custom event for any analytics tool to pick up
+    window.dispatchEvent(new CustomEvent('language-change', {
+        detail: { language: lang, timestamp: new Date().toISOString() }
+    }));
+
+    // GA4 support: send event if gtag is available
+    if (typeof gtag === 'function') {
+        gtag('event', 'language_switch', {
+            language: lang,
+            page_location: window.location.href
+        });
+    }
 }
 
 document.getElementById('lang-toggle')?.addEventListener('click', () => {
@@ -19,11 +81,13 @@ document.getElementById('lang-toggle')?.addEventListener('click', () => {
     setLanguage(current === 'en' ? 'es' : 'en');
 });
 
-// Apply saved language on load
+// Apply language on load: URL param > localStorage > default (en)
 (function() {
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
     const saved = localStorage.getItem('preferred-lang');
-    if (saved && saved !== 'en') {
-        setLanguage(saved);
+    const lang = urlLang || saved || 'en';
+    if (lang !== 'en') {
+        setLanguage(lang);
     }
 })();
 

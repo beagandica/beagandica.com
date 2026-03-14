@@ -141,7 +141,30 @@ const translations = {
     "footer-nuevo": "Nuevo Foundation",
     "footer-speaking": "Speaking",
     "footer-media": "Media",
-    "footer-connect": "Connect"
+    "footer-connect": "Connect",
+
+    // SEO Meta
+    "meta-title": "Bea Mendez Gandica | STEM Advocate, Speaker & Founder",
+    "meta-description": "Bea Mendez Gandica - Program Manager at Microsoft, CEO & Founder of Nuevo Foundation. First Venezuelan-American with a statue in the US. Inspiring 23,092+ students across 39 countries.",
+    "meta-og-title": "Bea Mendez Gandica | STEM Advocate, Speaker & Founder",
+    "meta-og-description": "Program Manager at Microsoft. Founder & CEO of Nuevo Foundation. First Venezuelan-American to have a statue in the US. Inspiring 23,092+ students across 39 countries.",
+    "meta-twitter-title": "Bea Mendez Gandica | STEM Advocate, Speaker & Founder",
+    "meta-twitter-description": "Program Manager at Microsoft. Founder & CEO of Nuevo Foundation. First Venezuelan-American to have a statue in the US.",
+
+    // Aria Labels
+    "aria-nav-toggle": "Toggle navigation",
+    "aria-lang-toggle": "Toggle language",
+    "aria-hero-img": "Bea Mendez Gandica",
+    "aria-nuvi": "Nuvi - Nuevo Foundation Mascot",
+    "aria-gallery1": "Teaching at Nuevo Foundation Workshop",
+    "aria-gallery2": "University of Arizona Award",
+    "aria-gallery3": "San Diego Comic-Con Panel",
+    "aria-gallery4": "With my statue",
+    "aria-gallery5": "Nuevo Foundation Workshop",
+    "aria-gallery6": "Microsoft Aspire Talks",
+    "aria-linkedin": "LinkedIn",
+    "aria-linktree": "Linktree",
+    "aria-instagram": "Instagram"
   },
 
   es: {
@@ -286,6 +309,29 @@ const translations = {
     "footer-nuevo": "Nuevo Foundation",
     "footer-speaking": "Conferencias",
     "footer-media": "Medios",
-    "footer-connect": "Contacto"
+    "footer-connect": "Contacto",
+
+    // SEO Meta
+    "meta-title": "Bea Mendez Gandica | Promotora STEM, Conferencista y Fundadora",
+    "meta-description": "Bea Mendez Gandica - Gerente de Programas en Microsoft, CEO y Fundadora de Nuevo Foundation. Primera venezolana-estadounidense con una estatua en EE.UU. Inspirando a más de 23,092 estudiantes en 39 países.",
+    "meta-og-title": "Bea Mendez Gandica | Promotora STEM, Conferencista y Fundadora",
+    "meta-og-description": "Gerente de Programas en Microsoft. Fundadora y CEO de Nuevo Foundation. Primera venezolana-estadounidense en tener una estatua en EE.UU. Inspirando a más de 23,092 estudiantes en 39 países.",
+    "meta-twitter-title": "Bea Mendez Gandica | Promotora STEM, Conferencista y Fundadora",
+    "meta-twitter-description": "Gerente de Programas en Microsoft. Fundadora y CEO de Nuevo Foundation. Primera venezolana-estadounidense en tener una estatua en EE.UU.",
+
+    // Aria Labels
+    "aria-nav-toggle": "Alternar navegación",
+    "aria-lang-toggle": "Cambiar idioma",
+    "aria-hero-img": "Bea Mendez Gandica",
+    "aria-nuvi": "Nuvi - Mascota de Nuevo Foundation",
+    "aria-gallery1": "Enseñando en un taller de Nuevo Foundation",
+    "aria-gallery2": "Premio de la Universidad de Arizona",
+    "aria-gallery3": "Panel en San Diego Comic-Con",
+    "aria-gallery4": "Con mi estatua",
+    "aria-gallery5": "Taller de Nuevo Foundation",
+    "aria-gallery6": "Microsoft Aspire Talks",
+    "aria-linkedin": "LinkedIn",
+    "aria-linktree": "Linktree",
+    "aria-instagram": "Instagram"
   }
 };
