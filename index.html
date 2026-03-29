@@ -23,6 +23,15 @@
     <meta name="twitter:description" id="meta-twitter-description" content="Program Manager at Microsoft. Founder & CEO of Nuevo Foundation. First Venezuelan-American to have a statue in the US.">
     <meta name="twitter:image" content="assets/images/bea-prof-1.png">
     
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KE8W38CE5N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KE8W38CE5N');
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -42,6 +51,7 @@
             <ul class="nav-menu">
                 <li><a href="#about" data-i18n="nav-about">About</a></li>
                 <li><a href="#expertise" data-i18n="nav-expertise">What I Do</a></li>
+                <li><a href="#ai" data-i18n="nav-ai">AI</a></li>
                 <li><a href="#achievements" data-i18n="nav-achievements">Achievements</a></li>
                 <li><a href="#nuevo" data-i18n="nav-nuevo">Nuevo Foundation</a></li>
                 <li><a href="#speaking" data-i18n="nav-speaking">Speaking</a></li>
@@ -59,7 +69,7 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <p class="hero-tagline" data-i18n="hero-tagline">Product Leader • STEM Advocate • Speaker • Founder</p>
+                <p class="hero-tagline" data-i18n="hero-tagline">AI & STEM Advocate • Product Leader<br>Speaker • Founder</p>
                 <h1 class="hero-title">Bea Mendez Gandica</h1>
                 <p class="hero-subtitle" data-i18n="hero-subtitle">Program Manager at Microsoft. Founder & CEO of Nuevo Foundation. First Venezuelan-American to have a statue in the United States.</p>
                 <blockquote class="hero-quote" data-i18n="hero-quote">"Rewrite the rules of the world."</blockquote>
@@ -168,6 +178,61 @@
             </div>
             <div class="expertise-cta">
                 <a href="#connect" class="btn btn-primary" data-i18n="expertise-cta">Work With Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI & Innovation Section -->
+    <section id="ai" class="ai-innovation">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="ai-label">AI & Innovation</span>
+                <h2 class="section-title" data-i18n="ai-title">Building with AI</h2>
+                <p class="section-description" data-i18n="ai-description">From automating engineering workflows to creating open-source education tools, I use AI to multiply impact and make technology more accessible.</p>
+            </div>
+            <div class="ai-stat-banner">
+                <span class="ai-stat-number">12+</span>
+                <span class="ai-stat-text" data-i18n="ai-stat-text">hours saved per week through AI-powered automation</span>
+            </div>
+            <div class="ai-grid">
+                <div class="ai-card">
+                    <div class="ai-card-icon">🤖</div>
+                    <h3 data-i18n="ai-card1-title">AI-Powered Workflows</h3>
+                    <p data-i18n="ai-card1-desc">I leverage AI to streamline engineering and compliance workflows, automating repetitive tasks, accelerating code reviews, and generating documentation. The result: fewer manual hours and more time for the work that matters most.</p>
+                    <ul class="ai-tools">
+                        <li data-i18n="ai-card1-tool1">GitHub Copilot</li>
+                        <li data-i18n="ai-card1-tool2">Azure OpenAI</li>
+                        <li data-i18n="ai-card1-tool3">Python</li>
+                        <li data-i18n="ai-card1-tool4">Claude Code</li>
+                        <li data-i18n="ai-card1-tool5">VS Code</li>
+                        <li data-i18n="ai-card1-tool6">Codex</li>
+                    </ul>
+                </div>
+                <div class="ai-card">
+                    <div class="ai-card-icon">🎓</div>
+                    <h3 data-i18n="ai-card2-title">AI Education Assistant</h3>
+                    <p data-i18n="ai-card2-desc">A bilingual learning tool I built to help students understand coding concepts, debug errors, and practice programming in English and Spanish. Fully open-source so anyone can use, fork, or contribute.</p>
+                    <ul class="ai-tools">
+                        <li data-i18n="ai-card2-tool1">React 19</li>
+                        <li data-i18n="ai-card2-tool2">TypeScript</li>
+                        <li data-i18n="ai-card2-tool3">Vite</li>
+                        <li data-i18n="ai-card2-tool4">Open Source</li>
+                    </ul>
+                    <div class="ai-card-links">
+                        <a href="https://beagandica.github.io/ai-education-assistant/" target="_blank" class="btn btn-primary btn-sm" data-i18n="ai-card2-link1">Try It Live →</a>
+                        <a href="https://github.com/beagandica/ai-education-assistant" target="_blank" class="btn btn-secondary btn-sm" data-i18n="ai-card2-link2">View Source Code →</a>
+                    </div>
+                </div>
+                <div class="ai-card ai-card-wide">
+                    <div class="ai-card-icon">🎤</div>
+                    <h3 data-i18n="ai-card3-title">AI Speaking & Advocacy</h3>
+                    <p data-i18n="ai-card3-desc">From Comic-Con AI panels to engineering teams across the globe, I share real-world AI success stories that show how automation and intelligent tooling can transform workflows and inspire adoption across organizations.</p>
+                    <ul class="ai-tools">
+                        <li data-i18n="ai-card3-tool1">AI Panels</li>
+                        <li data-i18n="ai-card3-tool2">Internal Advocacy</li>
+                        <li data-i18n="ai-card3-tool3">Global Impact</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -453,7 +518,7 @@
                     </a>
                     <a href="https://linktr.ee/beagandica" target="_blank" class="connect-link linktree">
                         <div class="connect-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.5 17.5h-2v-4.5h-5v4.5h-2v-11h2v4.5h5v-4.5h2v11z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="m13.73635 5.85251 4.00467-4.11665 2.3248 2.3808-4.20064 4.00466h5.9085v3.30473h-5.9365l4.22865 4.10766-2.3248 2.3338L12.0005 12.099l-5.74052 5.76852-2.3248-2.3248 4.22864-4.10766h-5.9375V8.12132h5.9085L3.93417 4.11666l2.3248-2.3808 4.00468 4.11665V0h3.4727zm-3.4727 10.30614h3.4727V24h-3.4727z"/></svg>
                         </div>
                         <div class="connect-content">
                             <h3 data-i18n="connect-linktree-title">Linktree</h3>
@@ -476,6 +541,7 @@
                 </div>
                 <div class="footer-links">
                     <a href="#about" data-i18n="footer-about">About</a>
+                    <a href="#ai" data-i18n="footer-ai">AI</a>
                     <a href="#achievements" data-i18n="footer-achievements">Achievements</a>
                     <a href="#nuevo" data-i18n="footer-nuevo">Nuevo Foundation</a>
                     <a href="#speaking" data-i18n="footer-speaking">Speaking</a>
@@ -486,8 +552,8 @@
                     <a href="https://www.linkedin.com/in/beagandica" target="_blank" aria-label="LinkedIn" data-i18n-aria="aria-linkedin">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                     </a>
-                    <a href="https://linktr.ee/beagandica" target="_blank" aria-label="Linktree" data-i18n-aria="aria-linktree">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.5 17.5h-2v-4.5h-5v4.5h-2v-11h2v4.5h5v-4.5h2v11z"/></svg>
+                    <a href="https://linktr.ee/beagandica" target="_blank" aria-label="Linktree" data-i18n-aria="aria-linktree" class="linktree-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="m13.73635 5.85251 4.00467-4.11665 2.3248 2.3808-4.20064 4.00466h5.9085v3.30473h-5.9365l4.22865 4.10766-2.3248 2.3338L12.0005 12.099l-5.74052 5.76852-2.3248-2.3248 4.22864-4.10766h-5.9375V8.12132h5.9085L3.93417 4.11666l2.3248-2.3808 4.00468 4.11665V0h3.4727zm-3.4727 10.30614h3.4727V24h-3.4727z"/></svg>
                     </a>
                     <a href="https://www.instagram.com/beaglobaltraveler" target="_blank" aria-label="Instagram" data-i18n-aria="aria-instagram">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
