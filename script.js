@@ -154,7 +154,7 @@ const fadeInObserver = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Add fade-in class to elements
-document.querySelectorAll('.section-header, .about-text, .award-card, .topic-card, .stat-card, .nuevo-text').forEach(el => {
+document.querySelectorAll('.section-header, .about-text, .award-card, .topic-card, .stat-card, .nuevo-text, .ai-card').forEach(el => {
     el.classList.add('fade-in');
     fadeInObserver.observe(el);
 });

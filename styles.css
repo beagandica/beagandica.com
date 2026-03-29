@@ -572,6 +572,111 @@ section {
     background: var(--light);
 }
 
+/* ===== AI & Innovation Section ===== */
+.ai-innovation {
+    background: var(--light);
+}
+
+.ai-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.ai-card {
+    background: var(--white);
+    padding: 36px;
+    border-radius: var(--radius-lg);
+    transition: var(--transition);
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.ai-card:hover {
+    border-color: var(--blue-accent);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.ai-card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.ai-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--dark);
+}
+
+.ai-card p {
+    font-size: 15px;
+    color: var(--gray);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.ai-tools {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.ai-tools li {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(37, 99, 235, 0.12) 100%);
+    color: var(--blue-accent);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.ai-card-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.ai-stat-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(37, 99, 235, 0.12) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: var(--radius-lg);
+    padding: 24px 32px;
+    margin-bottom: 32px;
+}
+
+.ai-stat-number {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--blue-accent);
+}
+
+.ai-stat-text {
+    font-size: 1.1rem;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.ai-card-wide {
+    grid-column: 1 / -1;
+}
+
+.btn-sm {
+    font-size: 13px;
+    padding: 10px 20px;
+}
+
 /* ===== Achievements Section ===== */
 .achievements {
     background: var(--light);
@@ -1186,6 +1291,11 @@ section {
     color: var(--white);
 }
 
+.footer-social a.linktree-icon:hover {
+    background: #43E55E;
+    color: var(--white);
+}
+
 .footer-bottom {
     padding-top: 30px;
     text-align: center;
@@ -1300,6 +1410,19 @@ section {
 
     .expertise-grid {
         grid-template-columns: 1fr;
+    }
+
+    .ai-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-card-links {
+        flex-direction: column;
+    }
+
+    .ai-stat-banner {
+        flex-direction: column;
+        text-align: center;
     }
 
     .speaking-venues {
