@@ -298,4 +298,40 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// ===== Gallery Lightbox =====
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox?.querySelector('img');
+const lightboxCaption = lightbox?.querySelector('.lightbox-caption');
+const lightboxClose = lightbox?.querySelector('.lightbox-close');
+const galleryItems = document.querySelectorAll('.gallery-item img');
+
+galleryItems.forEach(img => {
+    img.addEventListener('click', () => {
+        if (!lightbox) return;
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.textContent = img.alt;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+lightboxClose?.addEventListener('click', closeLightbox);
+
+lightbox?.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox?.classList.contains('active')) {
+        closeLightbox();
+    }
+});
+
 console.log('🚀 Beatris Mendez Gandica - Website loaded successfully!');
