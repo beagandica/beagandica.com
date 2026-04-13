@@ -191,6 +191,7 @@ const translations = {
     "aria-gallery4": "With my statue",
     "aria-gallery5": "Nuevo Foundation Workshop",
     "aria-gallery6": "Microsoft Aspire Talks",
+    "aria-gallery7": "With Tony Hawk at San Diego Comic-Con 2025",
     "aria-linkedin": "LinkedIn",
     "aria-linktree": "Linktree",
     "aria-instagram": "Instagram"
@@ -388,6 +389,7 @@ const translations = {
     "aria-gallery4": "Con mi estatua",
     "aria-gallery5": "Taller de Nuevo Foundation",
     "aria-gallery6": "Microsoft Aspire Talks",
+    "aria-gallery7": "Con Tony Hawk en San Diego Comic-Con 2025",
     "aria-linkedin": "LinkedIn",
     "aria-linktree": "Linktree",
     "aria-instagram": "Instagram"
