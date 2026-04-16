@@ -126,9 +126,9 @@ const translations = {
     "nuevo-feat4": "✨ 90% of students say they learned to code",
     "nuevo-cta": "Visit Nuevo Foundation →",
     "nuevo-stat1-label": "Students Inspired",
-    "nuevo-stat2-label": "Countries & Territories",
-    "nuevo-stat3-label": "Languages",
-    "nuevo-stat4-label": "Countries Reached",
+    "nuevo-stat2-label": "Countries Reached",
+    "nuevo-stat3-label": "Taught Countries & Territories",
+    "nuevo-stat4-label": "Languages",
 
     // Speaking
     "speaking-label": "Speaking",
@@ -332,9 +332,9 @@ const translations = {
     "nuevo-feat4": "✨ El 90% de los estudiantes dicen que aprendieron a programar",
     "nuevo-cta": "Visita Nuevo Foundation →",
     "nuevo-stat1-label": "Estudiantes inspirados",
-    "nuevo-stat2-label": "Países y territorios",
-    "nuevo-stat3-label": "Idiomas",
-    "nuevo-stat4-label": "Países alcanzados",
+    "nuevo-stat2-label": "Países alcanzados",
+    "nuevo-stat3-label": "Países y territorios enseñados",
+    "nuevo-stat4-label": "Idiomas",
 
     // Speaking
     "speaking-label": "Conferencias",
