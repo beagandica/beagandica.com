@@ -128,7 +128,7 @@ const translations = {
     "nuevo-stat1-label": "Students Inspired",
     "nuevo-stat2-label": "Countries & Territories",
     "nuevo-stat3-label": "Languages",
-    "nuevo-stat4-label": "Learned to Code",
+    "nuevo-stat4-label": "Countries Reached",
 
     // Speaking
     "speaking-label": "Speaking",
@@ -334,7 +334,7 @@ const translations = {
     "nuevo-stat1-label": "Estudiantes inspirados",
     "nuevo-stat2-label": "Países y territorios",
     "nuevo-stat3-label": "Idiomas",
-    "nuevo-stat4-label": "Aprendieron a programar",
+    "nuevo-stat4-label": "Países alcanzados",
 
     // Speaking
     "speaking-label": "Conferencias",
