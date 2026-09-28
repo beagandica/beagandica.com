@@ -2,14 +2,16 @@
 
 ![Website Preview](assets/images/bea-prof-1.png)
 
-A modern, responsive personal portfolio website showcasing the achievements, work, and impact of **Bea Mendez Gandica** - Program Manager at Microsoft, Founder & CEO of Nuevo Foundation, and the first Venezuelan-American to have a statue in the United States.
+A bilingual personal website for **Bea Mendez Gandica**, Senior Program Manager at Microsoft and Founder & CEO of Nuevo Foundation. The central message, "I build platforms that widen access," connects her cloud platform work, open learning resources, and leadership approach.
 
 ## 🌟 About
 
 This website tells the story of Bea Mendez Gandica, a Venezuelan-American technology leader who has dedicated her career to breaking barriers and creating opportunities for underrepresented communities in STEM. Born in San Cristóbal, Venezuela, and now making history in the United States, this portfolio showcases her journey from immigrant to industry leader.
 
 ### Key Highlights
-- **22,762+ students** impacted across **39 countries and territories**
+- **23,737+ students** taught, using the student count on Nuevo Foundation's homepage
+- **41 workshop countries and territories** (35 countries + 6 territories), using the detailed 4/13/2026 global reach post
+- **86 countries + 6 territories reached** through workshops and website visits combined, not a workshop attendance count
 - **First Venezuelan-American** to have a statue in the United States (Smithsonian AAAS IF/THEN Collection)
 - **10+ years** at Microsoft as a Program Manager
 - **Founder & CEO** of Nuevo Foundation (2018-present)
@@ -25,7 +27,7 @@ This website tells the story of Bea Mendez Gandica, a Venezuelan-American techno
 
 ### 🎯 Content Sections
 - **Hero Section**: Introduction with call-to-action buttons
-- **About**: Personal story and background
+- **About**: Personal story, cross-cultural background, and three leadership lessons
 - **Expertise**: Technical skills and areas of focus
 - **Achievements**: Awards, recognitions, and milestones
 - **Nuevo Foundation**: Details about her nonprofit organization
@@ -40,6 +42,8 @@ This website tells the story of Bea Mendez Gandica, a Venezuelan-American techno
 - **Scroll Animations**: Elements fade in as you scroll
 - **Social Sharing**: Open Graph and Twitter Card meta tags
 - **SEO Optimized**: Proper meta descriptions and structured content
+- **Bilingual Content**: English and Spanish text, accessible labels, and metadata
+- **Lightweight Photos**: Resized WebP images, lazy-loaded below the hero
 
 ## 💻 Technology Stack
 
@@ -62,6 +66,9 @@ beagandica.com/
 ├── index.html          # Main HTML file
 ├── styles.css          # All CSS styles and animations
 ├── script.js           # JavaScript functionality
+├── translations.js     # English and Spanish content and metadata
+├── tests/
+│   └── site.test.js    # Dependency-free content and asset regression tests
 ├── assets/
 │   └── images/         # Photos and graphics
 │       ├── favicon.png
@@ -94,7 +101,7 @@ beagandica.com/
    - **Option B**: Use a local server for better performance:
      ```bash
      # Using Python
-     python -m http.server 8000
+     python -m http.server 8000 --bind 127.0.0.1
      
      # Using Node.js (http-server)
      npx http-server
@@ -123,9 +130,23 @@ The website uses CSS custom properties for easy theming. Update these values in 
 ```
 
 ### Content
-- **Text Content**: Edit the HTML directly in `index.html`
-- **Images**: Replace files in `assets/images/` and update references in HTML
+- **Text Content**: Keep the English HTML fallback in `index.html` and both dictionaries in `translations.js` in sync. New `data-i18n`, `data-i18n-alt`, and `data-i18n-aria` keys need entries in both languages.
+- **Images**: Keep originals in `assets/images/`. The page uses WebP copies with EXIF orientation applied, a maximum edge of 1600 pixels (960 for the hero), quality 82, and encoding method 6. Update `width` and `height` in HTML when replacing a photo. Gallery and mascot images use lazy loading; the hero does not. Social previews retain the original PNG at an absolute URL.
 - **Social Links**: Update the connect section with your preferred contact methods
+- **Travel Guides**: The Explore Guides button points to `https://beagandica.github.io/beaglobaltraveler/`.
+- **Impact Figures**: Confirm dates and definitions with Nuevo Foundation before changing counts. The site distinguishes countries reached from countries and territories where workshops were taught.
+
+### Impact sources and definitions
+
+| Figure | Source and meaning |
+|---|---|
+| 23,737+ students | `https://www.nuevofoundation.org/`, the published student count. Keep the About and Nuevo counters in sync. |
+| 41 workshop countries and territories | `https://www.nuevofoundation.org/blog/post/1750`, dated 4/13/2026: 35 countries + 6 territories. Bea confirmed using this detailed breakdown instead of the homepage's 33 + 6 breakdown. |
+| 86 countries + 6 territories reached | The same post's deduplicated workshop and website-visitor footprint. Do not describe all these locations as places where students were taught. |
+| 7 program languages; 90% say they learned to code | Nuevo Foundation's homepage. The post's languages observed in website analytics measure something different from program languages. |
+| 12+ hours saved weekly | Bea's confirmed personal estimate, not a measured result for every user of these tools. |
+
+The Forbes achievement is a **shortlist recognition and invitation** to the 2019 Forbes Under 30 Summit Europe in Berlin, not selection for the published 30 Under 30 list.
 
 ### Styling
 - **Layout**: Modify CSS Grid and Flexbox properties in `styles.css`
@@ -134,12 +155,25 @@ The website uses CSS custom properties for easy theming. Update these values in 
 
 ## 📱 Responsive Design
 
-The website is fully responsive with breakpoints at:
+Layout breakpoints:
+- **Navigation**: Collapses at 1100px to keep English and Spanish controls in view
 - **Mobile**: < 768px
-- **Tablet**: 768px - 1023px  
-- **Desktop**: ≥ 1024px
+- **Stacked hero**: Up to 992px
+- **Desktop hero**: Above 992px
 
-All images are optimized and responsive, with proper alt text for accessibility.
+Page photos use optimized WebP copies; full-resolution originals remain available in the repository.
+
+## Local checks
+
+With Node.js installed, run:
+
+```powershell
+node --test tests\site.test.js
+```
+
+The tests check translation coverage and English fallback consistency, local assets and anchor targets, the travel guide destination, sharing metadata, and a combined page-photo budget below 1 MB.
+
+For browser changes, preview both languages on desktop, tablet, and a 320px-wide phone. Check menu expansion and Escape dismissal, the logo's return-to-top action, gallery images, language persistence, and reduced-motion behavior.
 
 ## 🌐 Deployment
 

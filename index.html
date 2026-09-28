@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bea Mendez Gandica | STEM Advocate, Speaker & Founder</title>
-    <meta name="description" id="meta-description" content="Bea Mendez Gandica - Program Manager at Microsoft, CEO & Founder of Nuevo Foundation. First Venezuelan-American with a statue in the US. Inspiring 23,092+ students across 39 countries.">
+    <title>Bea Mendez Gandica | Product leader, founder & speaker</title>
+    <meta name="description" id="meta-description" content="Bea Mendez Gandica, Senior Program Manager at Microsoft and founder of Nuevo Foundation. Building cloud platforms and open learning resources that widen access.">
+    <link rel="canonical" href="https://beagandica.com/">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -12,16 +13,16 @@
     
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.beatrismendezgandica.com/">
-    <meta property="og:title" id="meta-og-title" content="Bea Mendez Gandica | STEM Advocate, Speaker & Founder">
-    <meta property="og:description" id="meta-og-description" content="Program Manager at Microsoft. Founder & CEO of Nuevo Foundation. First Venezuelan-American to have a statue in the US. Inspiring 23,092+ students across 39 countries.">
-    <meta property="og:image" content="assets/images/bea-prof-1.png">
+    <meta property="og:url" content="https://beagandica.com/">
+    <meta property="og:title" id="meta-og-title" content="Bea Mendez Gandica | Product leader, founder & speaker">
+    <meta property="og:description" id="meta-og-description" content="I build platforms that widen access. Senior Program Manager at Microsoft, founder of Nuevo Foundation, and speaker on technology and opportunity.">
+    <meta property="og:image" content="https://beagandica.com/assets/images/bea-prof-1.png">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" id="meta-twitter-title" content="Bea Mendez Gandica | STEM Advocate, Speaker & Founder">
-    <meta name="twitter:description" id="meta-twitter-description" content="Program Manager at Microsoft. Founder & CEO of Nuevo Foundation. First Venezuelan-American to have a statue in the US.">
-    <meta name="twitter:image" content="assets/images/bea-prof-1.png">
+    <meta name="twitter:title" id="meta-twitter-title" content="Bea Mendez Gandica | Product leader, founder & speaker">
+    <meta name="twitter:description" id="meta-twitter-description" content="I build platforms that widen access. Senior Program Manager at Microsoft and founder of Nuevo Foundation.">
+    <meta name="twitter:image" content="https://beagandica.com/assets/images/bea-prof-1.png">
     
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KE8W38CE5N"></script>
@@ -42,13 +43,13 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">Bea Mendez Gandica</a>
-            <button class="nav-toggle" aria-label="Toggle navigation" data-i18n-aria="aria-nav-toggle">
+            <a href="#home" class="nav-logo">Bea Mendez Gandica</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" data-i18n-aria="aria-nav-toggle" aria-controls="nav-menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="#about" data-i18n="nav-about">About</a></li>
                 <li><a href="#expertise" data-i18n="nav-expertise">What I Do</a></li>
                 <li><a href="#ai" data-i18n="nav-ai">AI</a></li>
@@ -66,12 +67,12 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <p class="hero-tagline" data-i18n="hero-tagline">AI & STEM Advocate • Product Leader<br>Speaker • Founder</p>
+                <p class="hero-tagline" data-i18n="hero-tagline">Product leader • Founder • Speaker</p>
                 <h1 class="hero-title">Bea Mendez Gandica</h1>
-                <p class="hero-subtitle" data-i18n="hero-subtitle">Program Manager at Microsoft. Founder & CEO of Nuevo Foundation. First Venezuelan-American to have a statue in the United States.</p>
+                <p class="hero-subtitle" data-i18n="hero-subtitle"><strong>I build platforms that widen access.</strong> As a Senior Program Manager at Microsoft and founder of Nuevo Foundation, I work to make technology useful and within reach.</p>
                 <blockquote class="hero-quote" data-i18n="hero-quote">"Rewrite the rules of the world."</blockquote>
                 <div class="hero-buttons">
                     <a href="#connect" class="btn btn-primary" data-i18n="hero-btn-connect">Let's Connect</a>
@@ -80,7 +81,7 @@
             </div>
             <div class="hero-image">
                 <div class="hero-image-wrapper">
-                    <img src="assets/images/bea-prof-1.png" alt="Bea Mendez Gandica" data-i18n-alt="aria-hero-img">
+                    <img src="assets/images/bea-prof-1.webp" width="960" height="639" fetchpriority="high" alt="Bea Mendez Gandica" data-i18n-alt="aria-hero-img">
                 </div>
             </div>
         </div>
@@ -95,27 +96,44 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-label" data-i18n="about-label">My Story</span>
-                <h2 class="section-title" data-i18n="about-title">From Venezuela to Making History</h2>
+                <h2 class="section-title" data-i18n="about-title">Building paths for others</h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
                     <p class="lead"><span data-i18n="about-quote">"Si usted tiene, usted tiene que dar."</span><br><span class="quote-attr" data-i18n="about-quote-attr">My grandfather, Papito</span></p>
-                    <p data-i18n="about-p1">Born in San Cristóbal in the Venezuelan Andes, I moved to Miami at age 12 to learn English, studied abroad in Germany, and eventually made my way to the United States to pursue my dreams in technology.</p>
-                    <p data-i18n="about-p2">For over <strong>10 years at Microsoft</strong>, I've worked as a Program Manager on security engineering and Azure cloud services. But my work extends far beyond code. I'm passionate about opening doors for others who look like me.</p>
-                    <p data-i18n="about-p3">In 2018, I founded <strong>Nuevo Foundation</strong> to ensure every child, regardless of their background, can see themselves in technology. Today, we've inspired <strong>23,092+ students across 39 countries and territories</strong>.</p>
+                    <p data-i18n="about-p1">I was born in San Cristóbal, Venezuela. My path took me to Miami to learn English, to a host family in Germany during high school, and to China and India for study abroad during college. Those experiences shape how I work across cultures.</p>
+                    <p data-i18n="about-p2">As a <strong>Senior Program Manager at Microsoft</strong>, I work on Azure cloud platforms, building on a career in security engineering and cloud services. I bring teams together around shared problems and help turn complex requirements into systems people can use.</p>
+                    <p data-i18n="about-p3">I founded <strong>Nuevo Foundation in 2018</strong> to give more students a first chance to code. We publish our learning resources openly so volunteers and educators can run workshops without me in the room. The goal is not to do everything myself, but to make it possible for more people to contribute.</p>
                     <p data-i18n="about-p4">I became the <strong>first Venezuelan-American to have a statue in the United States</strong>: a 3D printed life-size statue displayed at the Smithsonian as part of the AAAS IF/THEN Collection, celebrating women in STEM.</p>
                     <div class="about-highlights">
                         <div class="highlight">
-                            <span class="highlight-number">23,092+</span>
+                            <span class="highlight-number">23,737+</span>
                             <span class="highlight-label" data-i18n="about-stat1-label">Students Impacted</span>
                         </div>
                         <div class="highlight">
-                            <span class="highlight-number">39</span>
-                            <span class="highlight-label" data-i18n="about-stat2-label">Countries & Territories</span>
+                            <span class="highlight-number">41</span>
+                            <span class="highlight-label" data-i18n="about-stat2-label">Workshop countries & territories</span>
                         </div>
                         <div class="highlight">
                             <span class="highlight-number">10+</span>
                             <span class="highlight-label" data-i18n="about-stat3-label">Years at Microsoft</span>
+                        </div>
+                    </div>
+                    <div class="leadership-lessons" aria-labelledby="leadership-title">
+                        <h3 id="leadership-title" data-i18n="leadership-title">What this work has taught me</h3>
+                        <div class="leadership-grid">
+                            <article class="leadership-card">
+                                <h4 data-i18n="leadership-listen-title">Listen before designing</h4>
+                                <p data-i18n="leadership-listen-desc">Understand what people are actually blocked on. Keep the differences that matter in a shared solution instead of creating a separate path for everyone.</p>
+                            </article>
+                            <article class="leadership-card">
+                                <h4 data-i18n="leadership-build-title">Build so others can lead</h4>
+                                <p data-i18n="leadership-build-desc">Good documentation, open resources, and practical tools let people move the work forward without waiting for me.</p>
+                            </article>
+                            <article class="leadership-card">
+                                <h4 data-i18n="leadership-impact-title">Measure who can succeed</h4>
+                                <p data-i18n="leadership-impact-desc">Leadership is not how many decisions come through me. It is how many people can succeed because of what I build.</p>
+                            </article>
                         </div>
                     </div>
                 </div>
@@ -134,7 +152,7 @@
                 <div class="expertise-card">
                     <div class="expertise-icon">💻</div>
                     <h3 data-i18n="expertise-card1-title">Product & Program Management</h3>
-                    <p data-i18n="expertise-card1-desc">10+ years at Microsoft leading cross-functional teams on Azure cloud services, security engineering, and platform development. Expert in shipping products at scale.</p>
+                    <p data-i18n="expertise-card1-desc">I work across teams to build shared cloud platforms at Microsoft. My approach is to understand the problem, earn trust, and make the shared solution easier to use than the workaround.</p>
                     <ul class="expertise-skills">
                         <li data-i18n="expertise-card1-skill1">Azure Cloud Services</li>
                         <li data-i18n="expertise-card1-skill2">Security Engineering</li>
@@ -188,7 +206,7 @@
             <div class="section-header">
                 <span class="section-label" data-i18n="ai-label">AI & Innovation</span>
                 <h2 class="section-title" data-i18n="ai-title">Building with AI</h2>
-                <p class="section-description" data-i18n="ai-description">From automating engineering workflows to creating open-source education tools, I use AI to multiply impact and make technology more accessible.</p>
+                <p class="section-description" data-i18n="ai-description">I build tools that make everyday work easier, help students learn to code, and turn my own experience into resources other people can use.</p>
             </div>
             <div class="ai-stat-banner">
                 <span class="ai-stat-number">12+</span>
@@ -198,7 +216,7 @@
                 <div class="ai-card">
                     <div class="ai-card-icon">🤖</div>
                     <h3 data-i18n="ai-card1-title">AI-Powered Workflows</h3>
-                    <p data-i18n="ai-card1-desc">I leverage AI to streamline engineering and compliance workflows, automating repetitive tasks, accelerating code reviews, and generating documentation. The result: fewer manual hours and more time for the work that matters most.</p>
+                    <p data-i18n="ai-card1-desc">I use AI to help with repetitive engineering tasks, code reviews, and documentation. The goal is less time on manual work and more time for decisions that need human judgment.</p>
                     <ul class="ai-tools">
                         <li data-i18n="ai-card1-tool1">GitHub Copilot</li>
                         <li data-i18n="ai-card1-tool2">Azure OpenAI</li>
@@ -236,7 +254,7 @@
                 <div class="ai-card">
                     <div class="ai-card-icon">✈️</div>
                     <h3 data-i18n="ai-card4-title">AI Travel Companion</h3>
-                    <p data-i18n="ai-card4-desc">Wanderly is a custom GitHub Copilot agent I built to plan trips, recommend local favorites, and generate interactive city guides from 74 countries of real travel experience. Open-source and always learning new cities.</p>
+                    <p data-i18n="ai-card4-desc">Wanderly is a custom GitHub Copilot agent I built to plan trips and turn my travel experience into interactive city guides. The project is open source, so others can explore the guides or build on the code.</p>
                     <ul class="ai-tools">
                         <li data-i18n="ai-card4-tool1">GitHub Copilot</li>
                         <li data-i18n="ai-card4-tool2">Custom Agent</li>
@@ -244,7 +262,7 @@
                         <li data-i18n="ai-card4-tool4">Open Source</li>
                     </ul>
                     <div class="ai-card-links">
-                        <a href="https://beaglobaltraveler.com" target="_blank" class="btn btn-primary btn-sm" data-i18n="ai-card4-link1">Explore Guides →</a>
+                        <a href="https://beagandica.github.io/beaglobaltraveler/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-i18n="ai-card4-link1">Explore Guides →</a>
                         <a href="https://github.com/beagandica/beaglobaltraveler" target="_blank" class="btn btn-secondary btn-sm" data-i18n="ai-card4-link2">View Source Code →</a>
                     </div>
                 </div>
@@ -282,8 +300,8 @@
                 </div>
                 <div class="achievement-card">
                     <div class="achievement-icon">📰</div>
-                    <h3 data-i18n="achievement5-title">Forbes 30 Under 30</h3>
-                    <p data-i18n="achievement5-desc">Shortlisted & attended Berlin Wall 30th Anniversary Summit</p>
+                    <h3 data-i18n="achievement5-title">Forbes 30 Under 30 shortlist</h3>
+                    <p data-i18n="achievement5-desc">Shortlisted for Forbes 30 Under 30 and invited to the 2019 Forbes Under 30 Summit Europe in Berlin, celebrating the 30th anniversary of the fall of the Berlin Wall.</p>
                 </div>
                 <div class="achievement-card">
                     <div class="achievement-icon">💯</div>
@@ -319,37 +337,45 @@
                     <h2 class="section-title" data-i18n="nuevo-title">Inspiring the Next Generation</h2>
                     <p class="lead" data-i18n="nuevo-lead">Every child deserves to see themselves in technology.</p>
                     <p data-i18n="nuevo-p1">In 2018, I founded Nuevo Foundation with a simple mission: to inspire children from underrepresented backgrounds to explore, feel confident, and succeed in STEM careers.</p>
-                    <p data-i18n="nuevo-p2">Through interactive coding workshops, technology classes, and connections with industry role models, we're breaking down stereotypes and building pathways to opportunity in <strong>7 languages</strong> across the globe.</p>
+                    <p data-i18n="nuevo-p2">We share our curriculum as open source so educators and volunteers can teach in their own communities. Our workshops combine hands-on coding with role models who help students see a place for themselves in technology.</p>
                     <ul class="nuevo-features">
                         <li data-i18n="nuevo-feat1">✨ Interactive coding workshops for K-12 students</li>
                         <li data-i18n="nuevo-feat2">✨ Free resources for Title I schools</li>
                         <li data-i18n="nuevo-feat3">✨ Programs offered in 7 languages</li>
                         <li data-i18n="nuevo-feat4">✨ 90% of students say they learned to code</li>
                     </ul>
-                    <a href="https://www.nuevofoundation.org" target="_blank" class="btn btn-gold" data-i18n="nuevo-cta">Visit Nuevo Foundation →</a>
+                    <a href="https://www.nuevofoundation.org/" target="_blank" class="btn btn-gold" data-i18n="nuevo-cta">Visit Nuevo Foundation →</a>
                 </div>
                 <div class="nuevo-right">
                     <div class="nuvi-mascot">
-                        <img src="assets/images/NuviGif_Party.gif" alt="Nuvi - Nuevo Foundation Mascot" data-i18n-alt="aria-nuvi">
+                        <img src="assets/images/NuviGif_Party.gif" loading="lazy" decoding="async" alt="Nuvi - Nuevo Foundation Mascot" data-i18n-alt="aria-nuvi">
                     </div>
                     <div class="nuevo-stats">
                         <div class="stat-card">
-                            <span class="stat-number">23,092+</span>
+                            <span class="stat-number">23,737+</span>
                             <span class="stat-label" data-i18n="nuevo-stat1-label">Students Inspired</span>
                         </div>
                         <div class="stat-card">
                             <span class="stat-number">86</span>
-                            <span class="stat-label" data-i18n="nuevo-stat2-label">Countries Reached</span>
+                            <span class="stat-label" data-i18n="nuevo-stat2-label">Countries reached, plus 6 territories</span>
                         </div>
                         <div class="stat-card">
-                            <span class="stat-number">39</span>
-                            <span class="stat-label" data-i18n="nuevo-stat3-label">Taught Countries & Territories</span>
+                            <span class="stat-number">41</span>
+                            <span class="stat-label" data-i18n="nuevo-stat3-label">Workshop countries & territories</span>
                         </div>
                         <div class="stat-card">
                             <span class="stat-number">7</span>
                             <span class="stat-label" data-i18n="nuevo-stat4-label">Languages</span>
                         </div>
                     </div>
+                    <p class="nuevo-impact-note">
+                        <span data-i18n="nuevo-impact-note">Global reach combines workshops and website visits, not students taught in every location. Workshops cover 35 countries and 6 territories.</span>
+                        <span class="nuevo-impact-sources">
+                            <a href="https://www.nuevofoundation.org/" target="_blank" rel="noopener noreferrer" data-i18n="nuevo-student-source">Student count</a>
+                            <span aria-hidden="true"> · </span>
+                            <a href="https://www.nuevofoundation.org/blog/post/1750" target="_blank" rel="noopener noreferrer" data-i18n="nuevo-reach-source">Global reach breakdown (4/2026)</a>
+                        </span>
+                    </p>
                 </div>
             </div>
         </div>
@@ -482,25 +508,25 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item portrait">
-                    <img src="assets/images/Bea-statue-PR.jpeg" alt="With my statue" data-i18n-alt="aria-gallery4">
+                    <img src="assets/images/Bea-statue-PR.webp" width="1600" height="1067" loading="lazy" decoding="async" alt="With my statue" data-i18n-alt="aria-gallery4">
                 </div>
                 <div class="gallery-item portrait">
-                    <img src="assets/images/Tony_Hawk_0Z82896.jpg" alt="With Tony Hawk at San Diego Comic-Con 2025" data-i18n-alt="aria-gallery7">
+                    <img src="assets/images/Tony_Hawk_0Z82896.webp" width="1143" height="1600" loading="lazy" decoding="async" alt="With Tony Hawk at San Diego Comic-Con 2025" data-i18n-alt="aria-gallery7">
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/Bea NF_Meany_20250207.jpg" alt="Teaching at Nuevo Foundation Workshop" data-i18n-alt="aria-gallery1">
+                    <img src="assets/images/Bea NF_Meany_20250207.webp" width="1600" height="1067" loading="lazy" decoding="async" alt="Teaching at Nuevo Foundation Workshop" data-i18n-alt="aria-gallery1">
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/Eller_Homecoming_Awards_2023_AZ_Inn_Julius_Schlosburg_20231103_1111.jpg" alt="University of Arizona Award" data-i18n-alt="aria-gallery2">
+                    <img src="assets/images/Eller_Homecoming_Awards_2023_AZ_Inn_Julius_Schlosburg_20231103_1111.webp" width="1600" height="1067" loading="lazy" decoding="async" alt="University of Arizona Award" data-i18n-alt="aria-gallery2">
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/Bea SDCC AI Panel 2025.jpg" alt="San Diego Comic-Con Panel" data-i18n-alt="aria-gallery3">
+                    <img src="assets/images/Bea SDCC AI Panel 2025.webp" width="1600" height="1060" loading="lazy" decoding="async" alt="San Diego Comic-Con Panel" data-i18n-alt="aria-gallery3">
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/Bea NF_Meany_2_20250207.jpg" alt="Nuevo Foundation Workshop" data-i18n-alt="aria-gallery5">
+                    <img src="assets/images/Bea NF_Meany_2_20250207.webp" width="1600" height="1067" loading="lazy" decoding="async" alt="Nuevo Foundation Workshop" data-i18n-alt="aria-gallery5">
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/Aspire-Talks-142.jpg" alt="Microsoft Aspire Talks" data-i18n-alt="aria-gallery6">
+                    <img src="assets/images/Aspire-Talks-142.webp" width="1600" height="1067" loading="lazy" decoding="async" alt="Microsoft Aspire Talks" data-i18n-alt="aria-gallery6">
                 </div>
             </div>
         </div>
@@ -554,7 +580,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <span class="footer-logo">Bea Mendez Gandica</span>
-                    <p data-i18n="footer-role">Program Manager at Microsoft<br>CEO & Founder, Nuevo Foundation</p>
+                    <p data-i18n="footer-role">Senior Program Manager at Microsoft<br>Founder & CEO, Nuevo Foundation</p>
                     <p class="footer-quote" data-i18n="footer-quote">"Rewrite the rules of the world."</p>
                 </div>
                 <div class="footer-links">
