@@ -1,5 +1,9 @@
 // ===== Language Toggle =====
 function setLanguage(lang) {
+    if (!Object.prototype.hasOwnProperty.call(translations, lang)) {
+        throw new RangeError(`Unsupported language: ${lang}`);
+    }
+
     // Swap text content
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
@@ -77,7 +81,7 @@ function setLanguage(lang) {
 }
 
 document.getElementById('lang-toggle')?.addEventListener('click', () => {
-    const current = localStorage.getItem('preferred-lang') || 'en';
+    const current = document.documentElement.lang;
     setLanguage(current === 'en' ? 'es' : 'en');
 });
 
@@ -85,28 +89,42 @@ document.getElementById('lang-toggle')?.addEventListener('click', () => {
 (function() {
     const urlLang = new URLSearchParams(window.location.search).get('lang');
     const saved = localStorage.getItem('preferred-lang');
-    const lang = urlLang || saved || 'en';
-    if (lang !== 'en') {
-        setLanguage(lang);
-    }
+    const lang = [urlLang, saved, 'en'].find(value =>
+        Object.prototype.hasOwnProperty.call(translations, value));
+    setLanguage(lang);
 })();
 
 // ===== Navigation Toggle =====
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const mobileNavigation = window.matchMedia('(max-width: 1100px)');
+
+function setMenuOpen(isOpen) {
+    navMenu.classList.toggle('active', isOpen);
+    navToggle.classList.toggle('active', isOpen);
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+}
 
 navToggle?.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    navToggle.classList.toggle('active');
+    setMenuOpen(!navMenu.classList.contains('active'));
 });
 
 // Close menu when clicking a link
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        navToggle.classList.remove('active');
+        setMenuOpen(false);
     });
 });
+
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && navMenu.classList.contains('active')) {
+        setMenuOpen(false);
+        navToggle.focus();
+    }
+});
+
+mobileNavigation.addEventListener('change', () => setMenuOpen(false));
 
 // ===== Navbar Scroll Effect =====
 const navbar = document.querySelector('.navbar');
@@ -122,16 +140,17 @@ window.addEventListener('scroll', () => {
 // ===== Smooth Scroll for Anchor Links =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        const target = href === '#' ? document.documentElement : document.getElementById(href.slice(1));
         if (target) {
+            e.preventDefault();
             const headerOffset = 80;
             const elementPosition = target.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
             window.scrollTo({
                 top: offsetPosition,
-                behavior: 'smooth'
+                behavior: reducedMotion.matches ? 'auto' : 'smooth'
             });
         }
     });
@@ -243,6 +262,8 @@ const counterObserver = new IntersectionObserver((entries) => {
 counters.forEach(counter => counterObserver.observe(counter));
 
 function animateCounter(element) {
+    if (reducedMotion.matches) return;
+
     const text = element.textContent;
     const hasPlus = text.includes('+');
     const number = parseInt(text.replace(/[^0-9]/g, ''));
@@ -270,7 +291,7 @@ window.addEventListener('scroll', () => {
     const hero = document.querySelector('.hero');
     const scrolled = window.pageYOffset;
     
-    if (hero && scrolled < window.innerHeight) {
+    if (hero && !reducedMotion.matches && scrolled < window.innerHeight) {
         hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
     }
 });
